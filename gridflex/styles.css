@@ -1,0 +1,65 @@
+/* Color Scheme */
+
+/* 
+
+https://color.adobe.com/dc6a9cd68e98073387aee48ef6bcbc9d--dark-purple-color-scheme-jewel-tone-color-scheme-color-theme-10408143/edit/?copy=true&base=2&rule=Custom&selected=4&name=Copy%20of%20dc6a9cd68e98073387aee48ef6bcbc9d--dark-purple-color-scheme-jewel-tone-color-scheme&mode=rgb&rgbvalues=0.3568627450980392,0.043137254901960784,0.2980392156862745,0.2823529411764706,0.13333333333333333,0.3333333333333333,0.1843137254901961,0.23529411764705882,0.3686274509803922,0.10196078431372549,0.3333333333333333,0.403921568627451,0,0.44313725490196076,0.4392156862745098&swatchOrder=0,1,2,3,4
+
+*/
+
+body {
+    font-size: 16px;
+}
+
+.container {
+    display: grid;
+
+    /*  Define the size and number of columns in our grid. 
+    The fr unit works similar to flex:
+    fr columns will share the free space in the row in proportion to their value.
+    We will have 2 columns - the first will be 3x the size of the second.  */
+    grid-template-columns: 3fr 1fr;
+
+    /*  Assign the grid areas we did earlier to specific places on the grid. 
+        First row is all header.
+        Second row is shared between main and sidebar.
+        Last row is all footer.  */
+    grid-template-areas: 
+        "header header"
+        "main sidebar"
+        "footer footer";
+
+    /*  The gutters between each grid cell will be 60 pixels. */
+    grid-gap: 50px;
+}
+
+div {
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.header {
+    grid-area: header;
+    background-color: #5B0B4C;
+    height: 80px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #482255;
+}
+
+
+.main {
+    grid-area: main;
+    background-color: #2F3C5E;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #007170;
+    height: 80px;
+}
+
