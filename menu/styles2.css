@@ -88,8 +88,8 @@ footer p {
     height: 50px;
     text-align: center;
     line-height: 50px;
-    color: #fff;
-    background: #2f3036;
+    background: #fff;
+    color: #333;
     text-decoration: none;
 }
 /*Active color*/
@@ -98,7 +98,11 @@ footer p {
 }
 /*Hover state for top level links*/
 .header li:hover a {
-    background: #FF5035;
+    background: #c3c3c3;
+}
+/*Hover state for top level links*/
+.header li:hover a.active {
+    background: #ff5035;
 }
 /*Style for dropdown links*/
 .header li:hover ul a {
@@ -109,8 +113,8 @@ footer p {
 }
 /*Hover state for dropdown links*/
 .header li:hover ul a:hover {
-    background: #FF5035;
-    color: #fff;
+    background: #c3c3c3;    
+    color: #333;
 }
 /*Hide dropdown links until they are needed*/
 .header li ul {
