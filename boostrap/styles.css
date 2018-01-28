@@ -50,9 +50,10 @@ body {
     padding: 0px;    
 }
 
-footer p {
+.footer p {
     display: table-cell;
     vertical-align: middle;
+    padding: 10px 0px;
 }
 
 /* Bootstrap customization */
