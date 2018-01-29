@@ -58,6 +58,10 @@ body {
 
 /* Bootstrap customization */
 
+.bg-light {
+    background-color: #fff !important;
+}
+
 .header nav {
     margin-top: 20px;
     padding: 0px;
