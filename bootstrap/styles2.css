@@ -1,0 +1,100 @@
+/* Color Scheme */
+
+/* 
+
+https://color.adobe.com/dc6a9cd68e98073387aee48ef6bcbc9d--dark-purple-color-scheme-jewel-tone-color-scheme-color-theme-10408143/edit/?copy=true&base=2&rule=Custom&selected=4&name=Copy%20of%20dc6a9cd68e98073387aee48ef6bcbc9d--dark-purple-color-scheme-jewel-tone-color-scheme&mode=rgb&rgbvalues=0.3568627450980392,0.043137254901960784,0.2980392156862745,0.2823529411764706,0.13333333333333333,0.3333333333333333,0.1843137254901961,0.23529411764705882,0.3686274509803922,0.10196078431372549,0.3333333333333333,0.403921568627451,0,0.44313725490196076,0.4392156862745098&swatchOrder=0,1,2,3,4
+
+*/
+
+body {
+    font-family: 'Arvo';
+    font-size: 16px;
+    padding: 0px 50px 0px 50px;
+    color: #333;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.sidebar {
+    background-color: #BDD4DE;
+}
+
+.main {
+}
+
+.footer {
+    display: table;
+    text-align: center;
+    background-color: #EFEFEF;
+    padding: 0px;
+    margin: 20px 0px 0px 0px;
+}
+
+.footer p {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px 0px;
+}
+
+/* Bootstrap customization */
+
+.bg-light {
+    background-color: #fff !important;
+}
+
+.header nav {
+    margin-top: 20px;
+}
+
+.nav-item {
+    padding: 5px 10px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #333;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #333;
+}
+
+nav li:hover {
+    background-color: #efefef;
+}
+
+nav li.active {
+    background-color: #FF5035;
+}
+
+nav li.active nav-link {
+    color: #fff;
+}
+
+nav .dropdown-menu {
+    background-color: #efefef;
+}
+
+nav .dropdown-item:focus, .dropdown-item:hover {
+    color: #333;
+    text-decoration: none;
+    background-color: #fff;
+}
+
+form {
+    background: #efefef;
+    padding: 10px;
+}
+
+/*Responsive Styles*/
+@media screen and (max-width : 760px){
+    body {
+        padding: 0px;
+    }
+
+    .header {
+	height: auto;
+    }
+
+}
