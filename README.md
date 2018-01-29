@@ -37,5 +37,15 @@ You can test responsive layout using the developer tools in your browser.
 
 ### bootstrap
 
+These examples show how to use [Bootstrap 4](https://getbootstrap.com/).
 
+* index.html and styles.css: Shows how to use a responsive menu from
+  Bootstrap, with the same grid layout from previous examples.
+
+* index2.html and styles2.css: Shows how to make a nearly identical
+  layout using the grid system from Bootstrap, which is based on
+  flexbox.
+
+* examples.html and styles2.css: Shows various examples of Bootstrap
+  components.
 
