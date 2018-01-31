@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Daniel Zappala</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" />    
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+	<div class="header">
+	  <nav class="navbar" role="navigation" aria-label="main navigation">
+	    <div class="navbar-brand">
+	      <a class="navbar-item logo" href="/">
+		CS 260
+	      </a>
+	      <button class="button navbar-burger" data-target="navMenu">
+		<span></span>
+		<span></span>
+		<span></span>
+	      </button>
+	    </div>
+	    <div id="navMenu" class="navbar-menu">
+	      <div class="navbar-start">
+		<a class="navbar-item active" href="#">Home</a>
+		<div class="navbar-item has-dropdown is-hoverable">
+		  <a class="navbar-link">About</a>
+		  <div class="navbar-dropdown">
+		    <a class="navbar-item" href="#">Who We Are</a>
+		    <a class="navbar-item" href="#">What We Do</a>
+		  </div>
+		</div>
+		<div class="navbar-item has-dropdown is-hoverable">
+		  <a class="navbar-link">Portfolio</a>
+		  <div class="navbar-dropdown">
+		    <a class="navbar-item" href="#">Photography</a>
+		    <a class="navbar-item" href="#">Web & User Interface Design</a>
+		    <a class="navbar-item" href="#">Illustration</a>
+		  </div>
+		</div>
+		<a class="navbar-item" href="#">News</a>
+		<a class="navbar-item" href="#">Contact</a>
+	      </div>
+	    </div>
+	  </nav>
+	</div>
+	<div class="sidebar">
+	  <h1 class="title">Sidebar</h1>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+	    elit. Donec quis dui vitae elit ornare convallis. Lorem ipsum
+	    dolor sit amet, consectetur adipiscing elit. Integer vitae
+	    condimentum enim. Cras rhoncus ipsum sed aliquet
+	    porttitor. Aliquam ut eros convallis, imperdiet felis at,
+	    consequat mi. In accumsan dui sit amet elit commodo
+	    vulputate. Nunc luctus enim vel malesuada semper. Integer
+	    metus nisl, elementum at libero non, consectetur euismod
+	    purus. Donec ornare tristique metus, quis egestas odio euismod
+	    eget. </p>
+
+	</div>
+	<div class="main">
+	  <h1 class="title">Main</h1>
+	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+	    elit. Aenean ut dolor placerat, consequat nisl vitae,
+	    malesuada eros. Morbi malesuada, justo in viverra porttitor,
+	    erat purus lobortis tellus, vel semper orci massa eu
+	    erat. Pellentesque habitant morbi tristique senectus et netus
+	    et malesuada fames ac turpis egestas. Nullam feugiat nulla
+	    orci, non varius neque laoreet vitae. Praesent sed odio
+	    accumsan, laoreet risus eget, maximus felis. Nullam leo
+	    mauris, volutpat imperdiet scelerisque eu, lacinia id
+	    nunc. Praesent hendrerit maximus condimentum. Phasellus
+	    faucibus quam vitae aliquam tincidunt. Sed luctus ut purus
+	    vitae lobortis.</p>
+
+	  <p>Suspendisse eget finibus sem. Proin auctor tempus velit in
+	    ultrices. Duis pharetra tortor quis quam rutrum eleifend. Cras
+	    laoreet aliquam turpis et vulputate. Sed iaculis diam
+	    tellus. In at libero lobortis, vehicula enim in, tincidunt
+	    velit. Pellentesque facilisis sem magna, sit amet sagittis
+	    tortor ullamcorper ac. Nunc bibendum pulvinar libero, vitae
+	    tempus elit aliquam nec.</p>
+	</div>
+	<div class="footer">
+	  <p>A CS 260 examples website. You may freely use this code.</p>
+	</div>
+      </div>
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+
+      // Get all "navbar-burger" elements
+      var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+      // Add a click event on each of them
+      $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', function () {
+
+      // Get the target from the "data-target" attribute
+      var target = $el.dataset.target;
+      var $target = document.getElementById(target);
+
+      // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+      $el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+      });
+      });
+      }
+
+      });
+    </script>
+
+  </body>
+</html>
+
