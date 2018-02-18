@@ -7,6 +7,11 @@ var app = new Vue({
     drag: {},
   },
   computed: {
+    activeTodos: function() {
+      return this.todos.filter(function(item) {
+	return !item.completed;
+      });
+    },
     filteredTodos: function() {
       if (this.show === 'active')
 	return this.todos.filter(function(item) {
@@ -17,21 +22,20 @@ var app = new Vue({
 	  return item.completed;
 	});
       return this.todos;
-    }
+    },
   },
   methods: {
     addItem: function() {
-      console.log("addTodo");
       this.todos.push({text: this.message,completed:false});
       this.message = '';
     },
-    deleteItem: function(todo) {
-      var index = this.todos.indexOf(todo);
+    completeItem: function(item) {
+      item.completed = !item.completed;
+    },
+    deleteItem: function(item) {
+      var index = this.todos.indexOf(item);
       if (index > -1)
 	this.todos.splice(index,1);
-    },
-    completeItem: function(todo) {
-      todo.completed = !todo.completed;
     },
     showAll: function() {
       this.show = 'all';
@@ -55,8 +59,6 @@ var app = new Vue({
       var indexTarget = this.todos.indexOf(item);
       this.todos.splice(indexItem,1);
       this.todos.splice(indexTarget,0,this.drag);
-      
-      console.log('Looks like you dropped ',this.drag.text,' onto ',item.text);
-    }
+    },
   }
 });

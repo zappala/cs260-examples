@@ -8,19 +8,19 @@
   <body>
     <div id="app">
       <h1>A List of Things To Do</h1>
-      <p v-show="filteredTodos.length === 0">You are done with all your tasks! Good job!</p>
+      <p v-show="activeTodos.length === 0">You are done with all your tasks! Good job!</p>
       <form v-on:submit.prevent="addItem">
 	<input type="text" v-model="message">
 	<button type="submit">Add</button>
       </form>
-      <div class="controls" v-if="filteredTodos.length !== 0">
+      <div class="controls">
 	<button v-on:click="showAll()">Show All</button>
 	<button v-on:click="showActive()">Show Active</button>
 	<button v-on:click="showCompleted()">Show Completed</button>
 	<button v-on:click="deleteCompleted()">Delete Completed</button>
       </div>
       <ul>
-	<li v-for="item in filteredTodos" draggable="true" @drag="dragItem(item)" @dragover.prevent @drop="dropItem(item)">
+	<li v-for="item in filteredTodos" draggable="true" v-on:dragstart="dragItem(item)" v-on:dragover.prevent v-on:drop="dropItem(item)">
 	  <input type="checkbox" v-model="item.completed" v-on:click="completeItem(item)" /><label v-bind:class="{ completed: item.completed }">{{ item.text }}</label><button v-on:click="deleteItem(item)" class="delete">X</button>
 	</li>
       </ul>
