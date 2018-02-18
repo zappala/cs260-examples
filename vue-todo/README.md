@@ -5,6 +5,15 @@ This is a simple todo list application built using [Vue](https://vuejs.org/).
 To learn how this is built, clone this repository, then remove all
 the code in `index.html` and `script.js`.
 
+Inside your cloned repository, start up a Python server to view the
+site in your browser:
+
+```
+python -m SimpleHTTPServer
+```
+
+You can navigate to `localhost:8000` to see the site.
+
 ## A static list
 
 Start with this in `index.html`:
