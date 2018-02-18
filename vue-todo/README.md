@@ -2,6 +2,9 @@
 
 This is a simple todo list application built using [Vue](https://vuejs.org/).
 
+To follow along with how this is built, clone this repository, then remove all
+the code in `index.html` and `script.js`.
+
 ## A static list
 
 Start with this in `index.html`:
@@ -379,3 +382,5 @@ the list. Isn't this fantastic!
 The entire `index.html` is 31 lines of code, and `script.js` is 59
 lines of code.
 
+You can examine the styles in `styles.css` to see how we made those
+work.
