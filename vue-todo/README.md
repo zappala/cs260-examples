@@ -2,7 +2,7 @@
 
 This is a simple todo list application built using [Vue](https://vuejs.org/).
 
-To follow along with how this is built, clone this repository, then remove all
+To learn how this is built, clone this repository, then remove all
 the code in `index.html` and `script.js`.
 
 ## A static list
@@ -377,7 +377,7 @@ which item is being dragged. The `dropItem` method places the dropped
 item ahead of the one it is dropped onto.
 
 You should now be able to use drag-and-drop to reorder the items in
-the list. Isn't this fantastic!
+the list. Isn't this fantastic?!
 
 The entire `index.html` is 31 lines of code, and `script.js` is 59
 lines of code.
