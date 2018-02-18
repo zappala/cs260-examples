@@ -348,7 +348,9 @@ dropped. The `v-on:dragstart` attribute calls the `dragItem` method
 when dragging starts. The `v-on:dragover` attribute prevents HTML5
 from triggering an event every time the an item is dragged over
 another. The `v-on:drop` attribute calls the `dropItem` method when
-the item is dropped.
+the item is dropped. You can see a [complete list of available
+JavaScript
+methods](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API).
 
 Note that the `item` passed to `dragItem` is the item being dragged,
 and the `item` being dropped is the item it is being dropped
