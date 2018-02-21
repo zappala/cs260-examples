@@ -159,8 +159,8 @@ item property. If you look in `style.css`, you will see that the
 To make this work, add another method in `script.js`, after `addItem`:
 
 ```
-    completeItem: function(todo) {
-      todo.completed = !todo.completed;
+    completeItem: function(item) {
+      item.completed = !item.completed;
     },
 ```
 
@@ -243,7 +243,7 @@ Add some buttons to `index.html` that handle these actions, right between the `f
 the `ol`.
 
 ```
-      <div class="controls" v-if="filteredTodos.length !== 0">
+      <div class="controls">
 	<button v-on:click="showAll()">Show All</button>
 	<button v-on:click="showActive()">Show Active</button>
 	<button v-on:click="showCompleted()">Show Completed</button>
