@@ -123,7 +123,7 @@ browser update your code automatically.
 
 ## Creating a new home page
 
-Edit `index.html` to remove the Vue logo and change the styles:
+Edit `App.vue` to remove the Vue logo and change the styles:
 
 ```
 <template>
