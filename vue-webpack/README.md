@@ -278,6 +278,12 @@ Edit `router/index.js` to include this path:
     ]
 ```
 
+Be sure to import `Profile` as you did `HomePage` at the top:
+
+```
+import Profile from '@/components/Profile'
+```
+
 Now you can visit `http://localhost:8080/#/profile` to see this page.
 
 ## Add a menu
@@ -549,6 +555,12 @@ Modify `router/index.js`:
 	}
 
     ]
+```
+
+Be sure to import `Todo` as you did `HomePage` at the top:
+
+```
+import Todo from '@/components/Todo'
 ```
 
 Modify the menu in `components/AppHeader.vue`:
