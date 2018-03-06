@@ -100,15 +100,12 @@ Tutorial](https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
 For now, we'll just introduce the convention used for the HTTP methods. Typically these methods are
 used in these situations:
 
----------+--------------------
+Method   |   Purpose
+---------|--------------------
 POST     |   Create an object
----------+--------------------
 GET      |   Read an object
----------+--------------------
 PUT	 |   Update an object
----------+--------------------
 DELETE	 |   Delete an object
----------+--------------------
 
 Notice that if you read down, the letters spell CRUD. This is a common acronym for APIs and
 databases, representing the four basic operations you can perform.
