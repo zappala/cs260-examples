@@ -158,7 +158,7 @@ When it comes to desinging a RESTful API, there are a number of [rules
 ... er, guidelines ... that people
 follow](https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
 
-![guidelines](guidelines.jpg)
+![guidelines](images/guidelines.jpg)
 
 A good example is:
 
