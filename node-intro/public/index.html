@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css"/>
+    <title>Vue Tickets</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Ticket System</h1>
+      <form v-on:submit.prevent="addTicket">
+	<input v-model="addedName" placeholder="Name"></p>
+	<textarea v-model="addedProblem"></textarea>
+	<br/>
+	<button type="submit">Submit</button>
+      </form>
+      <h3>Tickets</h3>
+      <div v-for="ticket in tickets">
+	<hr>
+	<div class="ticket">
+	  <div class="problem">
+	    <p>{{ticket.problem}}</p>
+	    <p><i>-- {{ticket.name}}</i></p>
+	  </div>
+	  <div class="delete">
+	    <button v-on:click="deleteTicket(ticket)" class="delete">Delete</button>
+	  </div>
+	</div>
+      </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" integrity="sha256-pU9euBaEcVl8Gtg+FRYCtin2vKLN8sx5/4npZDmY2VA=" crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
