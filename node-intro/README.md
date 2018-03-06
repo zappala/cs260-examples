@@ -156,9 +156,9 @@ Notice that we can return JSON responses.
 
 When it comes to desinging a RESTful API, there are a number of [rules
 ... er, guidelines ... that people
-follow](https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api)
+follow](https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api).
 
-![guidelines](images/guidelines.jpg)
+![guidelines](images/guidelines.jpg | width=100)
 
 A good example is:
 
