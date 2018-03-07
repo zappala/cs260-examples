@@ -49,11 +49,11 @@ npm install express
   `.gitignore` in the top level of your repository that contains:
 
 ```
-node-modules
+node_modules
 ```
 
 This will prevent you from adding the node modules directory, which often contains many libraries,
-into your git repository. Instead, because you have a `package.json`, anyone can use ``npm install`
+into your git repository. Instead, because you have a `package.json`, anyone can use `npm install`
 to install all the dependencies for your project. To see how this works, you can always try cloning
 your repository to a new directory and do `npm install` there.
 
