@@ -195,7 +195,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 This includes the modules we're using and initializes them.
 
 ```
-app.use(express.static('public'))
+app.use(express.static('public'));
 ```
 
 This tells Express that it should serve any files in the `public` directory as if they were just
