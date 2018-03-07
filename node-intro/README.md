@@ -253,6 +253,23 @@ app.listen(3000, () => console.log('Server listening on port 3000!'));
 
 This starts the server on port 3000.
 
+## Testing with curl
+
+```
+$ curl -d '{"name":"Daniel","problem":"Nothing works! This software is junk!"}' -H "Content-Type: application/json" -X POST localhost:3000/api/tickets
+{"id":1,"name":"Daniel","problem":"Nothing works! This software is junk!"}
+
+$ curl localhost:3000/api/tickets
+[{"id":1,"name":"Daniel","problem":"Nothing works! This software is junk!"}]
+
+$ curl -d '{"name":"Daniel","problem":"Never mind, this system is cool. It was a feature, not a bug!"}' -H "Content-Type: application/json" -X POST localhost:3000/api/tickets
+{"id":2,"name":"Daniel","problem":"Never mind, this system is cool. It was a feature, not a bug!"}
+
+$ curl localhost:3000/api/tickets
+[{"id":1,"name":"Daniel","problem":"Nothing works! This software is junk!"},{"id":2,"name":"Daniel","problem":"Never mind, this system is cool. It was a feature, not a bug!"}]
+```
+
+
 ## Vue front end
 
 In the `public` directory, you'll find a Vue front end for adding and deleting tickets.  This code
