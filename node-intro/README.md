@@ -16,7 +16,7 @@ If you setup Node using nvm, then you need to first tell nvm which version of no
 
 ## Initialize a new node project
 
-The first step with node is to initialize a new project. You do this with `node init`.
+The first step with node is to initialize a new project. You do this with `npm init`.
 
 ```
 mkdir node-intro
