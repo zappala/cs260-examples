@@ -248,7 +248,7 @@ method to parse it. We check whether this ID is present and return a 404 error i
 Otherwise, we remove it and return 200 OK.
 
 ```
-app.listen(3000, () => console.log('Server listening on port 3000!'))
+app.listen(3000, () => console.log('Server listening on port 3000!'));
 ```
 
 This starts the server on port 3000.
