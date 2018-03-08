@@ -77,8 +77,7 @@ When you run `node server.js`, your server will run and listen on port 3000. You
 browser at `localhost:3000`.
 
 In this example, we are using `require` to include the Express module. A good explanation of how
-require works is at this article called [Requiring modules in Node.js: Everything you need to
-know](Requiring modules in Node.js: Everything you need to know ).
+require works is at this article called [Requiring modules in Node.js: Everything you need to know](https://medium.freecodecamp.org/requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8).
 
 `express()` is the top-level function exported by Express. There are a number of functions defined
 on this in the [API documentation](https://expressjs.com/en/4x/api.html).
