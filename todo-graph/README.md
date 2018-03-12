@@ -560,6 +560,33 @@ Then, add the following component in `src/components/Graph.vue`:
 
 ```
 
+The last step is to update the routing in `src/router/index.js`:
+
+```
+import Vue from 'vue'
+import Router from 'vue-router'
+import Todo from '@/components/Todo'
+import Graph from '@/components/Graph'
+
+Vue.use(Router)
+
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'Todo',
+      component: Todo
+    },
+    {
+      path: '/graph',
+      name: 'Graph',
+      component: Graph
+    }
+
+  ]
+})
+```
+
 You should now be able to visit `http://localhost:8080/#/graph` and see a beautiful graph.
 
 ## Menu
