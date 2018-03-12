@@ -465,7 +465,6 @@ Then, add the following component in `src/components/Graph.vue`:
 	<option value="10">November</option>
 	<option value="11">December</option>
     </select>
-    <input
     <div class="graph">
       <bar-chart v-if="chartData" :chart-data="chartData" :options="options" />
     </div>
