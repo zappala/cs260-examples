@@ -1,6 +1,23 @@
 <template>
-  <div class="graph">
-    <bar-chart v-if="chartData" :chart-data="chartData" :options="options" />
+  <div>
+    <select v-model="monthText" name="month">
+	<option value="0">January</option>
+	<option value="1">February</option>
+	<option value="2">March</option>
+	<option value="3">April</option>
+	<option value="4">May</option>
+	<option value="5">June</option>
+	<option value="6">July</option>
+	<option value="7">August</option>
+	<option value="8">September</option>
+	<option value="9">October</option>
+	<option value="10">November</option>
+	<option value="11">December</option>
+    </select>
+    <input
+    <div class="graph">
+      <bar-chart v-if="chartData" :chart-data="chartData" :options="options" />
+    </div>
   </div>
 </template>
 
@@ -13,6 +30,7 @@
    data () {
      return {
        items: [],
+       monthText: '1',
        options: {
 	 responsive: true,
 	 maintainAspectRatio: true,
@@ -28,6 +46,9 @@
      this.getItems();
    },
    computed: {
+     month: function() {
+       return parseInt(this.monthText);
+     },
      chartData: function() {
        let labels = [];
        let data = [];
@@ -40,9 +61,11 @@
        for (let day = 1; day < 32; day++ ) {
 	 completedCounts[day] = 0;
        }
-       this.items.forEach(function(item) {
+       this.items.forEach(item => {
 	 let day = new Date(item.completedDate).getDate();
-	 if (item.completed)
+	 let month = new Date(item.completedDate).getMonth();
+	 console.log(month, this.month);
+	 if (month === this.month && item.completed)
 	   completedCounts[day] += 1;
        });
        for (let day in completedCounts) {
@@ -69,6 +92,10 @@
        }).catch(err => {
        });
      },
+     setMonth: function(event) {
+       this.month = event;
+       console.log(this.month);
+     }
    }
  }
 </script>
