@@ -27,7 +27,7 @@ web server on port 8080 with your front end code. By making the change
 below, the development sever will forward certain URLs to your back end
 server, which will run on port 3000.
 
-In `build/index.js`, modify the `dev` property to include:
+In `config/index.js`, modify the `dev` property to include:
 
 
 ```
