@@ -305,7 +305,7 @@ export default new Router({
 
 ## Back End
 
-On the back end, we'll use a Node server. Put the following into `server.js`:
+On the back end, we'll use a Node server. Create `server.js` and put the following in it:
 
 ```
 const express = require('express');
