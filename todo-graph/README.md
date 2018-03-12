@@ -221,6 +221,7 @@ Create `src/components/Todo.vue`:
        });
      },
    }
+ }
 </script>
 
 <style scoped>
