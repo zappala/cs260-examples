@@ -547,9 +547,6 @@ Then, add the following component in `src/components/Graph.vue`:
        }).catch(err => {
        });
      },
-     setMonth: function(event) {
-       this.month = event;
-     }
    }
  }
 </script>

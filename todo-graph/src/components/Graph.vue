@@ -90,9 +90,6 @@
        }).catch(err => {
        });
      },
-     setMonth: function(event) {
-       this.month = event;
-     }
    }
  }
 </script>
