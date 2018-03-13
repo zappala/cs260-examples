@@ -8,7 +8,7 @@ that one first.
 The Vue guide includes a useful image that shows the basic idea behind state management in a Vue
 application:
 
-![state](todo-state/images/state.png)
+![state](images/state.png)
 
 We will setup a store to manage state, and require that all changes to state be made through methods
 defined on the store. This state can then be read by all components, again using methods defined by
@@ -49,7 +49,7 @@ export default new Vuex.Store({
 
 To understand this it is helpful to see how the Vuex architecture works:
 
-![vuex](todo-state/images/vuex.png)
+![vuex](images/vuex.png)
 
 Vue components will modify the data in the store by dispatching an action, such as `addItem`.  This
 function will commit a change to the store using a mutation, such as `setItems`. This updates the
