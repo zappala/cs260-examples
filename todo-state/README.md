@@ -125,6 +125,11 @@ We can call these methods from a component by calling, for example:
 
 ```
 this.$store.dispatch('getItems');
+```
+
+or:
+
+```
 this.$store.dispatch('addItem',{
   text: this.text,
   completed: false,
