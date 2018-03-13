@@ -332,6 +332,9 @@ app.put('/api/items/:id', (req, res) => {
   let item = items[index];
   item.completed = req.body.completed;
   item.text = req.body.text;
+  if (item.completed) {
+    item.completedDate = Date.now();
+  }
   // handle drag and drop re-ordering
   if (req.body.orderChange) {
     let indexTarget = itemsMap.indexOf(req.body.orderTarget);
@@ -344,6 +347,9 @@ app.put('/api/items/:id', (req, res) => {
 app.post('/api/items', (req, res) => {
   id = id + 1;
   let item = {id:id, text:req.body.text, completed: req.body.completed};
+  if (item.completed) {
+    item.completedDate = Date.now();
+  }
   items.push(item);
   res.send(item);
 });
