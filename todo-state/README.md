@@ -259,6 +259,7 @@ Now modify `deleteItem` as follows:
 +        id: item.id
         });
       },
+```
 
 Finally, modify `dropItem`:
 
