@@ -403,6 +403,8 @@ You should now have a working ticket application that persists its data in a dat
 Whenever you want to change existing database tables, you can use a migration to safely add
 the new columns. In this case, we'd like to add a priority for each ticket.
 
+### Creating a migration
+
 Start by using knex to create a migration:
 
 ```
@@ -410,6 +412,16 @@ npx knex migrate:make tickets
 ```
 
 Edit the created file and add the following:
+
+
+
+
+
+
+
+
+
+
 
 ```
 
