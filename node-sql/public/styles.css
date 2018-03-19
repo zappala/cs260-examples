@@ -1,0 +1,29 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    padding: 20px 100px 0px 100px;
+    background: #f3f3f3;
+}
+
+textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 100px;
+}
+
+input, textarea, select, button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+.ticket {
+    display: flex;
+}
+
+.problem {
+    flex: 5;
+}
+
+.delete {
+    flex: 1;
+}
