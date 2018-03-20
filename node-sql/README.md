@@ -413,18 +413,7 @@ npx knex migrate:make tickets
 
 Edit the created file and add the following:
 
-
-
-
-
-
-
-
-
-
-
 ```
-
 exports.up = function(knex, Promise) {
   return Promise.all([
     knex.schema.table('tickets', function(table) {
@@ -434,9 +423,11 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-  knex.schema.table('tickets', function(table) {
-    table.dropColumn('priority');
-  }),
+  return Promise.all([
+    knex.schema.table('tickets', function(table) {
+      table.dropColumn('priority');
+    }),
+  ]);
 };
 ```
 
