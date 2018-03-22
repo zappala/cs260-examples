@@ -39,16 +39,23 @@ also need to run Node.js as root. To fix this, make the following changes:
 ```
 $ sudo mysql -u root
 
-mysql> USE mysql;
-mysql> CREATE USER zappala IDENTIFIED BY unix_socket;
-mysql> GRANT ALL PRIVILEGES ON *.* TO zappala;
-mysql> FLUSH PRIVILEGES;
-mysql> exit;
-
-$ sudo service mysql restart
+MariaDB> USE mysql;
+MariaDB> CREATE USER zappala IDENTIFIED BY unix_socket;
+MariaDB> GRANT ALL PRIVILEGES ON *.* TO zappala;
+MariaDB> FLUSH PRIVILEGES;
+MariaDB> exit;
 ```
 
 **Replace zappala with your username.**
+
+You should now be able to login as yourself, e.g.:
+
+```
+$ mysql
+MariaDB> create DATABASE test;
+MariaDB> drop DATABASE test;
+MariaDB> exit;
+```
 
 ### MacOS
 
