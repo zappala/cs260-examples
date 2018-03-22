@@ -26,12 +26,29 @@ they are drop-in replacements that do the same thing, but they may diverge at so
 To install on Linux:
 
 ```
-sudo apt install mariadb-server mysql-client
-mysql_secure_installation
+sudo apt install mariadb-server
+sudo mysql_secure_installation
 ```
 
-Be sure to set a good root password. See the [documentation on this
+Do *not* set a root password. Say yes to everything else. See the [documentation on this
 script](https://mariadb.com/kb/en/library/mysql_secure_installation/) for why it is important.
+
+MariaDB is now setup to allow you to connect without a password if you are root. This means you would
+also need to run Node.js as root. To fix this, make the following changes:
+
+```
+$ sudo mysql -u root
+
+mysql> USE mysql;
+mysql> CREATE USER zappala IDENTIFIED BY unix_socket;
+mysql> GRANT ALL PRIVILEGES ON *.* TO zappala;
+mysql> FLUSH PRIVILEGES;
+mysql> exit;
+
+$ sudo service mysql restart
+```
+
+**Replace zappala with your username.**
 
 ### MacOS
 
