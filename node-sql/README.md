@@ -1,5 +1,7 @@
 # Using a SQL database with Node.js
 
+** Please wait before doing this activity, I need to update the instructions.**
+
 A SQL or relational database contains a set of tables, with relationships between the tables.
 Basic SQL statements include the following:
 
@@ -40,7 +42,7 @@ also need to run Node.js as root. To fix this, make the following changes:
 $ sudo mysql -u root
 
 MariaDB> USE mysql;
-MariaDB> CREATE USER zappala IDENTIFIED BY unix_socket;
+MariaDB> CREATE USER zappala IDENTIFIED VIA unix_socket;
 MariaDB> GRANT ALL PRIVILEGES ON *.* TO zappala;
 MariaDB> FLUSH PRIVILEGES;
 MariaDB> exit;
@@ -74,7 +76,7 @@ We need to create a database for our app to use. We'll call it `tickets`.
 Use the mysql command line client:
 
 ```
-mysql -u root -p
+mysql
 MariaDB [(none)]> create database tickets;
 MariaDB [(none)]> quit;
 ```
