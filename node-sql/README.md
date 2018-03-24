@@ -32,7 +32,15 @@ To do this:
 sudo apt install mariadb-server
 ```
 
-MariaDB by default is setup to use the UNIX socket for permissions. To change this, do the following:
+MariaDB may by default be setup to use the UNIX socket for permissions. To check this, do the following:
+
+```
+$ sudo mysql -u root
+MariaDB> USE mysql;
+MariaDB> select host,user,plugin from user;
+```
+
+If you see `unix_socket` as the plugin, then you will need to change this by doing the following:
 
 ```
 $ sudo mysql -u root
