@@ -1,7 +1,5 @@
 # Using a SQL database with Node.js
 
-** Please wait before doing this activity, I need to update the instructions.**
-
 A SQL or relational database contains a set of tables, with relationships between the tables.
 Basic SQL statements include the following:
 
@@ -23,9 +21,58 @@ We are going to use:
 MariaDB is a fork of the MySQL project that remains purely open source. Oracle runs MySQL.  For now,
 they are drop-in replacements that do the same thing, but they may diverge at some point.
 
-### Linux
+### Linux Option 1
 
-To install on Linux:
+This setup will allow you to login to MySQL using a new username and password
+that you setup just for MySQL. This is the standard method most people use.
+
+To do this:
+
+```
+sudo apt install mariadb-server
+```
+
+MariaDB by default is setup to use the UNIX socket for permissions. To change this, do the following:
+
+```
+$ sudo mysql -u root
+MariaDB> USE mysql;
+MariaDB> UPDATE user SET plugin='mysql_native_password' WHERE User='root';
+MariaDB> FLUSH PRIVILEGES;
+MariaDB> exit;
+```
+
+You can now run:
+
+```
+sudo mysql_secure_installation
+```
+
+You may set a root password if you like. Say yes to everything else. See the [documentation on this
+script](https://mariadb.com/kb/en/library/mysql_secure_installation/) for why it is important.
+
+You should now be able to login as root:
+
+```
+$ mysql -u root
+MariaDB> create DATABASE test;
+MariaDB> drop DATABASE test;
+MariaDB> exit;
+```
+
+If you set a root password, you may need:
+
+```
+$ mysql -u root -p
+```
+
+### Linux Option 2
+
+This setup will allow you to login to MySQL using your Linux credentials (username, password) without having
+to setup a separate MySQL username and password. This is a new method, so there is less help documentation
+on how to make this work.
+
+To do this:
 
 ```
 sudo apt install mariadb-server
@@ -58,6 +105,7 @@ MariaDB> create DATABASE test;
 MariaDB> drop DATABASE test;
 MariaDB> exit;
 ```
+
 
 ### MacOS
 
@@ -131,22 +179,49 @@ we'll do is initialize knex:
 npx knex init
 ```
 
-Now edit `knexfile.js` so it has the details needed for your database connection:
+Now edit `knexfile.js` so it has the details needed for your database connection. 
+
+### MySQL with a password
+
+If you setup MySQL with a user account and password, then:
 
 ```
   development: {
     client: 'mariasql',
     connection: {
       host     : '127.0.0.1',
-      user     : 'root',
-      password : '',
+      user     : 'USERNAME',
+      password : 'PASSWORD',
       db : 'tickets',
       charset  : 'utf8'
     }
   },
 ```
 
-Put in the password you chose when you setup MariaDB or MySQL.
+Replace USERNAME with the username of the account (usually `root`), and PASSWORD with the password you created (blank if none).
+
+### MySQL with UNIX permissions
+
+If you setup MySQL to use UNIX permissions (Linux Option 2), then:
+
+```
+  development: {
+    client: 'mariasql',
+    connection: {
+      unixSocket    : '/var/run/mysqld/mysqld.sock',
+      user     : 'USERNAME',
+      db : 'tickets',
+      charset  : 'utf8'
+    }
+  },
+```
+
+You will need to verify that the path given above is the location of the UNIX socket that you will
+use to communicate with MariaDB. This is the path I had on my Digital Ocean droplet.
+
+Replace USERNAME with your username.
+
+### Migration
 
 Next, we'll make a migration to create a table called `tickets`.
 
