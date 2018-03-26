@@ -208,6 +208,8 @@ If you setup MySQL with a user account and password, then:
 
 Replace USERNAME with the username of the account (usually `root`), and PASSWORD with the password you created (blank if none).
 
+**If you used MySQL, be sure to use "database" instead of "db".**
+
 ### MySQL with UNIX permissions
 
 If you setup MySQL to use UNIX permissions (Linux Option 2), then:
