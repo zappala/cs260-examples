@@ -629,7 +629,7 @@ In `script.js, modify `data` so it contains a new field:
   },
 ```
 
-Also in `script.js`, modify `getTicket` to send the priority field:
+Also in `script.js`, modify `addTicket` to send the priority field:
 
 ```
     addTicket: function() {
